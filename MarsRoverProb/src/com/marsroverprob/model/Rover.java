@@ -8,31 +8,37 @@ public class Rover {
     super();
   }
 
-  private int xCoordinate;
-  private int yCoordinate;
+  private int xcoordinate;
+  private int ycoordinate;
   private Orientation orientation;
 
-  public Rover(int xCoordinate, int yCoordinate, Orientation orientation) {
+  /**
+   * This is a parameterized constructor for Rover class.
+   * @param xcoordinate - X coordinate of the rover
+   * @param ycoordinate - Y coordinate of the rover
+   * @param orientation - direction of the rover
+   */
+  public Rover(int xcoordinate, int ycoordinate, Orientation orientation) {
     super();
-    this.xCoordinate = xCoordinate;
-    this.yCoordinate = yCoordinate;
+    this.xcoordinate = xcoordinate;
+    this.ycoordinate = ycoordinate;
     this.orientation = orientation;
   }
 
   public int getxCoordinate() {
-    return xCoordinate;
+    return xcoordinate;
   }
 
-  public void setxCoordinate(int xCoordinate) {
-    this.xCoordinate = xCoordinate;
+  public void setxCoordinate(int xcoordinate) {
+    this.xcoordinate = xcoordinate;
   }
 
   public int getyCoordinate() {
-    return yCoordinate;
+    return ycoordinate;
   }
 
-  public void setyCoordinate(int yCoordinate) {
-    this.yCoordinate = yCoordinate;
+  public void setyCoordinate(int ycoordinate) {
+    this.ycoordinate = ycoordinate;
   }
 
   public Orientation getOrientation() {

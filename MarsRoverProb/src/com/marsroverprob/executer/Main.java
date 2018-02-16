@@ -5,23 +5,19 @@ import java.util.Scanner;
 public class Main {
 
   /**
+   * This is the main method to invoke the executer.
+   * @param args - command line arguments
    * 
-   Test Input:
+Test Input:
 5 5
 1 2 N
 LMLMLMLMM
 3 3 E
 MMRMMRMRRM
-   * 
-   * Expected Output:
-   * 
-   * 1 3 N
-   * 
-   * 5 1 E
-   * 
-   * 
-   * 
-   * */
+Expected Output:
+1 3 N
+5 1 E  
+   */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     String maxPos = scanner.nextLine();

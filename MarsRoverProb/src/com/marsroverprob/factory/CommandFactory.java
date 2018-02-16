@@ -12,6 +12,11 @@ public class CommandFactory {
   private RotateLeftCommand rotateLeftCommand = new RotateLeftCommand();
   private RotateRightCommand rotateRightCommand = new RotateRightCommand();
 
+  /**
+   * This method is used to fetch respective factory methods.
+   * @param factoryType - factoryType input string
+   * @return RoverCommand - respective RoverCommand Object
+   */
   public RoverCommand getFactory(String factoryType) {
     RoverCommand command = null;
     if (factoryType.equals(RoverConstants.MOVE_AHEAD)) {

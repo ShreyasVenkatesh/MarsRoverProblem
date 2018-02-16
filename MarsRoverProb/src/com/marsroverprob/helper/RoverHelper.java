@@ -1,31 +1,45 @@
 package com.marsroverprob.helper;
 
-import org.apache.commons.lang.StringUtils;
-
 import com.marsroverprob.constants.RoverConstants;
 import com.marsroverprob.factory.CommandFactory;
 import com.marsroverprob.model.Orientation;
 import com.marsroverprob.model.Rover;
 
+import org.apache.commons.lang.StringUtils;
+
 public class RoverHelper {
 
   private static final CommandFactory COMMAND_FACTORY = new CommandFactory();
 
+  /**
+   * This method is invoke to move the rover ahead one step.
+   * @param rover - rover's current position details
+   * @param maxPos - boundary of the planet
+   */
   public static void moveAhead(Rover rover, String maxPos) {
     String[] maxPosCords = getMaxCoords(maxPos);
     if (maxPosCords.length == 2) {
       if (rover.getOrientation().equals(Orientation.N)) {
-        rover.setyCoordinate(Math.min(rover.getyCoordinate() + 1, Integer.parseInt(maxPosCords[1])));
+        rover.setyCoordinate(Math.min(rover.getyCoordinate() + 1, 
+            Integer.parseInt(maxPosCords[1])));
       } else if (rover.getOrientation().equals(Orientation.W)) {
-        rover.setxCoordinate(Math.min(rover.getxCoordinate() - 1, Integer.parseInt(maxPosCords[0])));
+        rover.setxCoordinate(Math.min(rover.getxCoordinate() - 1, 
+            Integer.parseInt(maxPosCords[0])));
       } else if (rover.getOrientation().equals(Orientation.S)) {
-        rover.setyCoordinate(Math.min(rover.getyCoordinate() - 1, Integer.parseInt(maxPosCords[1])));
+        rover.setyCoordinate(Math.min(rover.getyCoordinate() - 1, 
+            Integer.parseInt(maxPosCords[1])));
       } else if (rover.getOrientation().equals(Orientation.E)) {
-        rover.setxCoordinate(Math.min(rover.getxCoordinate() + 1, Integer.parseInt(maxPosCords[0])));
+        rover.setxCoordinate(Math.min(rover.getxCoordinate() + 1,
+            Integer.parseInt(maxPosCords[0])));
       }
     }
   }
 
+  /**
+   * This method is invoke to rotate the rover 90 degree left.
+   * @param rover - rover's current position details
+   * @param maxPos - boundary of the planet
+   */
   public static void rotateLeft(Rover rover, String maxPos) {
     if (rover.getOrientation().equals(Orientation.N)) {
       rover.setOrientation(Orientation.W);
@@ -38,6 +52,11 @@ public class RoverHelper {
     }
   }
 
+  /**
+   * This method is invoke to rotate the rover 90 degree right.
+   * @param rover - rover's current position details
+   * @param maxPos - boundary of the planet
+   */
   public static void rotateRight(Rover rover, String maxPos) {
     if (rover.getOrientation().equals(Orientation.N)) {
       rover.setOrientation(Orientation.E);
@@ -50,6 +69,11 @@ public class RoverHelper {
     }
   }
 
+  /**
+   * This method is used to fetch the actual orientation enum value of rover from string.
+   * @param orientationStr - Orientation of the rover in String
+   * @return Orientation - returns orientation enum value
+   */
   public static Orientation getOrientation(String orientationStr) {
     Orientation orientation = null;
     if (orientationStr.equals(RoverConstants.NORTH)) {
@@ -64,6 +88,13 @@ public class RoverHelper {
     return orientation;
   }
 
+  /**
+    * This method is used to construct the rover.
+    * @param rover - rover's default position details
+    * @param roverPos - rover's actual position
+    * @param maxPos - boundary of the planet
+    * @return
+    */
   public static Rover constructRover(Rover rover, String roverPos, String maxPos) {
     if (StringUtils.isNotEmpty(roverPos)) {
       String[] positions = roverPos.split(RoverConstants.MATCH_SPACE);
@@ -85,6 +116,14 @@ public class RoverHelper {
     return maxPosCords;
   }
 
+
+  /**
+   * This method is used to move/rotate rover.
+   * @param rover - input rover to move/rotate
+   * @param roverInput - rover commands to be executed
+   * @param maxPos - boundary of the planet
+   * @return Rover - final rover position
+   */
   public static Rover moveRover(Rover rover, String roverInput, String maxPos) {
     for (int strIndex = 0; strIndex < roverInput.length(); strIndex++) {
       String currstr = String.valueOf(roverInput.charAt(strIndex));
