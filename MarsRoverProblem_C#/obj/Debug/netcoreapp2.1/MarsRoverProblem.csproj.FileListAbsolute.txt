@@ -1,0 +1,11 @@
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\bin\Debug\netcoreapp2.1\MarsRoverProblem.deps.json
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\bin\Debug\netcoreapp2.1\MarsRoverProblem.runtimeconfig.json
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\bin\Debug\netcoreapp2.1\MarsRoverProblem.runtimeconfig.dev.json
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\bin\Debug\netcoreapp2.1\MarsRoverProblem.dll
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\bin\Debug\netcoreapp2.1\MarsRoverProblem.pdb
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\obj\Debug\netcoreapp2.1\MarsRoverProblem.csprojAssemblyReference.cache
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\obj\Debug\netcoreapp2.1\MarsRoverProblem.csproj.CoreCompileInputs.cache
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\obj\Debug\netcoreapp2.1\MarsRoverProblem.AssemblyInfoInputs.cache
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\obj\Debug\netcoreapp2.1\MarsRoverProblem.AssemblyInfo.cs
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\obj\Debug\netcoreapp2.1\MarsRoverProblem.dll
+C:\Users\venkas39\Documents\DotNetProjects\MarsRoverProblem\obj\Debug\netcoreapp2.1\MarsRoverProblem.pdb
